@@ -1,0 +1,14 @@
+.wrap {
+    margin: 20px auto;
+    width: 800px;
+    min-height: 600px;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.personlist {
+    width: 600px; 
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
