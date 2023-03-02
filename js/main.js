@@ -50,14 +50,16 @@ NumberOnly(elYear);
 elBtnOk.addEventListener('click', (ev) => { 
     persname = upFirst(elName.value);
     surname = upFirst(elSurname.value);
-    //year = Number(elYear.value);
-    //age = Number(time - year);
-    age = time - Number(elYear.value);
-    person.push({persname, surname, age});
-    renderPersonList(elList);
-    elName.value = '';
-    elSurname.value = '';
-    elYear.value = '';
+    year = Number(elYear.value);
+    //console.log(year);
+    age = Number(time - year);
+    //age = time - Number(elYear.value);
+    if ((persname!='')&&(surname!='')&&(year>0)&&(age>0))
+        {person.push({persname, surname, age});
+        renderPersonList(elList);
+        elName.value = '';
+        elSurname.value = '';
+        elYear.value = '';}
 });
 
 
