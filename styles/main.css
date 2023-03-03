@@ -8,8 +8,10 @@
 
 .personArea2 {
   display: flex;
+  gap: 10px;
 }
 
 .personlist, .personlist2 {
   margin: 20px 0;
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */

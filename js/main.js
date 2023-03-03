@@ -52,6 +52,12 @@ const renderPersonList = (arr, lnkList) => {
     lnkList.innerHTML = html;
   };
 
+elInputDate.addEventListener('change', (ev) => {
+    BthDate = ev.target.value;
+    //let year = Number(BthDate.substring(0,4)); 
+    //let date = moment(BthDate).fromNow();
+});
+
 LetterOnly(elName);
 LetterOnly(elSurname);
 NumberOnly(elYear);
@@ -66,16 +72,11 @@ elBtnOk.addEventListener('click', () => {
     if ((persname!='')&&(surname!='')&&(year>0)&&(age>0))
         {person.push({persname, surname, date});
         renderPersonList(person, elList);
-        elName.value = '';
-        elSurname.value = '';
-        elYear.value = '';}
-    else return;
-});
-
-elInputDate.addEventListener('change', (ev) => {
-    BthDate = ev.target.value;
-    //let year = Number(BthDate.substring(0,4)); 
-    //let date = moment(BthDate).fromNow();
+        }
+    //else return;
+    elName.value = '';
+    elSurname.value = '';
+    elYear.value = '';
 });
 
 elBtnOk2.addEventListener('click', () => { 
@@ -85,7 +86,6 @@ elBtnOk2.addEventListener('click', () => {
     date = BthDate;
     if ((persname!='')&&(surname!=''))
         {person2.push({persname, surname, date});
-        console.log(person2);
         renderPersonList(person2, elList2);
         elName2.value = '';
         elSurname2.value = '';
