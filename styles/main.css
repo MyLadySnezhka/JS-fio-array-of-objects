@@ -6,6 +6,10 @@
   padding: 20px;
 }
 
-.personlist {
+.personArea2 {
+  display: flex;
+}
+
+.personlist, .personlist2 {
   margin: 20px 0;
 }/*# sourceMappingURL=main.css.map */

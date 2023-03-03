@@ -11,14 +11,31 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="personArea">
+        <div class="personArea"><p>Введіть ваше ім"я, прізвище та рік народження:</p>
             <input type="text" placeholder="Iм'я" maxlength="20" name="input_name">
             <input type="text" placeholder="Прізвище" maxlength="20" name="input_surname">
             <input type="text" placeholder="Рік народження" maxlength="4" name="input_year">
             <button type="button" name="btnOk">Push!</button>
         </div>
         <div class="personlist">Ім"я, прізвище та вік опитуваних:</div>
+        <hr>
+        <p>Або оберіть дату народження:</p>
+        <div class="personArea2">
+            <input type="text" placeholder="Iм'я" maxlength="20" name="input_name2">
+            <input type="text" placeholder="Прізвище" maxlength="20" name="input_surname2">
+            
+                <form>
+                        <!-- <label for="bth_date">Або оберіть дату народження:</label> -->
+                        <input type="date" class="bday" id="bday" name="bth_date" min="1900-01-01" max="2020-01-01">
+                
+                </form>
+            
+            <button type="button" name="btnOk2">Push!</button>
+        </div>
+        <div class="personlist2">Ім"я, прізвище та дата народження:</div>
     </div>
+
+
     <script src="./js/main.js"></script>
 </body>
 </html>
