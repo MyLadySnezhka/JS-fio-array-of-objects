@@ -32,7 +32,7 @@ const upFirst = (str) =>
 
 const NumberOnly = (InputYear) => {
     InputYear.addEventListener('keyup', (ev) => {
-        InputYear.value = InputYear.value.replace(/[^0-9.]/g, '');
+        ev.target.value = ev.target.value.replace(/[^0-9.]/g, '');
 })};
 
 const renderPersonList = (lnkList) => {
@@ -47,11 +47,10 @@ LetterOnly(elName);
 LetterOnly(elSurname);
 NumberOnly(elYear);
 
-elBtnOk.addEventListener('click', (ev) => { 
+elBtnOk.addEventListener('click', () => { 
     persname = upFirst(elName.value);
     surname = upFirst(elSurname.value);
     year = Number(elYear.value);
-    //console.log(year);
     age = Number(time - year);
     //age = time - Number(elYear.value);
     if ((persname!='')&&(surname!='')&&(year>0)&&(age>0))
@@ -60,6 +59,7 @@ elBtnOk.addEventListener('click', (ev) => {
         elName.value = '';
         elSurname.value = '';
         elYear.value = '';}
+    else return;
 });
 
 
